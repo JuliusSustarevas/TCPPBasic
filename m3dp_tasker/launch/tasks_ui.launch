@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch>
+
+    <node name="print_tasker" pkg="print_tasker" type="print_tasker.py" output="screen"/>
+
+</launch>

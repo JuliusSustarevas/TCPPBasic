@@ -1,0 +1,14 @@
+TCPPBasic
+
+# 1 Download raw data
++RM/data/download_files.bash should download raw mat files. These are raw data related to creationg of RM/IRM structures. In general, they contain end effector poses and resulting IK solution
+
+# 2 RRT Entry Point
+Try to read comments/run +RRT/entry_point.  
+
+# 3 ???
+
+# 4 Profit
+
+# Notes:
+Main places that are interesting for RM/IRM perspective are the classes +RM/ASRM +RM/ASIRM a
