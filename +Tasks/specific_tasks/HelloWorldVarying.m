@@ -55,4 +55,8 @@ task.obj=fp;
 task.map_fn=file;
 task.map_path=path;
 task.num_layers=1;
+% Create directory if it doesn't exist
+if (~exist(task_dir, 'dir'))
+    mkdir(task_dir);
+end
 save(task_name,"task");
