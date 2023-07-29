@@ -1,8 +1,13 @@
 % This script is the main entry point to solving TCPP problem. It loads up a task/map, sets up the scene and RRT. Solves. Does some smoothing (You dont need todo that much, this is illustrative.) And then puts the solution into  a data structure that can lateer be sent to the robot via m3dp_tasker
 %%
 % clear all
-% irm=RM.ASIRM(); % I keep this commented out cuz it takees forever to
-% load. but you need to load it once. 
+
+% I keep this commented out cuz it takees forever to    
+% load. but you need to load it once
+if (exist('irm', 'var') == false)
+    disp('Loading the IRM file. This will take some time...')
+    irm=RM.ASIRM(); 
+end
 %% select Task/Map
 [fn,path] = uigetfile(); % Navigate to m3dp_scenes/test_world/tasks/ and pick something
 task_fn=strcat(path,fn);
