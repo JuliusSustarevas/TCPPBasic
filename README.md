@@ -3,6 +3,8 @@ TCPPBasic
 # 1 Download raw data
 +RM/data/download_files.bash should download raw mat files. These are raw data related to creationg of RM/IRM structures. In general, they contain end effector poses and resulting IK solution
 
+# 1.1
+Go to +Tasks/specific_tasks/HelloWorldConstant (or varying) and run that script. On prompt select the test world yaml file in m3dp_scenes
 # 2 RRT Entry Point
 Try to read comments/run +RRT/entry_point.  
 

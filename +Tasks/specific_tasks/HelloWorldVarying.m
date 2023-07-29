@@ -29,25 +29,6 @@ path.plot();
 view(0,90)
 axis equal
 
-%% Create varying orientation
-T=path.toTForm(path,"zonly");
-nn=size(T,3);
-TD=TForm.DOWN;
-T(1:3,1:3,:)=repmat(TD(1:3,1:3),1,1,nn);
-xx=squeeze(T(1,4,:));
-y=-sin(4*pi*xx./max(xx)).*pi/2;
-R=eul2rotm([ y zeros(nn,2)],"XYZ");
-
-for ii=1:nn
-    T(1:3,1:3,ii)=T(1:3,1:3,ii)*R(:,:,ii);
-end
-
-
-path.traj=T;
-path.plotTForm(path.traj,0.1);
-path.s=path.gett(1);
-
-axis equal
 %% Create constant orientation
 T=path.toTForm(path,"zonly");
 nn=size(T,3);
@@ -65,7 +46,7 @@ save(name,"task");
 
 
 % %%
-[file,path] = uigetfile(".yaml");
+[file,path] = uigetfile(".yaml","Select Map File m3dp_scenes/testworld/");
 task_name=strcat("tasks/",name);
 task_=task;
 clear task
