@@ -42,16 +42,17 @@ path.s=path.gett(1);
 task=path;
 fp=path;
 name="hello_world_varying_orientation";
-save(name,"task");
+%save(name,"task");
 
 
 % %%
 [file,path] = uigetfile(".yaml","Select Map File m3dp_scenes/testworld/");
-task_name=strcat("tasks/",name);
+task_dir=strcat(path,"tasks");
+task_name=strcat(task_dir,filesep, name);
 task_=task;
 clear task
 task.obj=fp;
 task.map_fn=file;
 task.map_path=path;
 task.num_layers=1;
-save(strcat(path,task_name),"task");
+save(task_name,"task");
